@@ -93,6 +93,7 @@ body {
   transform: rotateX(-180deg);
 }
 
+/* ======================================== media query ======================================== */
 @media screen and (max-width: 800px) {
   .headline {
     font-size: 1.3em;
