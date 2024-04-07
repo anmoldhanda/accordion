@@ -1,0 +1,103 @@
+/* ======================================== google fonts ======================================== */
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap");
+
+:root {
+  --lightblue-color: cornflowerblue;
+  --white-color: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Fira Code", monospace;
+}
+
+body {
+  /* background: var(--lightblue-color); */
+  background-image: url("penguin.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.projectdetails-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+  text-transform: capitalize;
+}
+
+.headline,
+.description {
+  font-weight: normal;
+  color: var(--white-color);
+}
+
+.accordion-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+  margin: 2rem 0;
+}
+
+.accordion {
+  width: 50%;
+  background: var(--white-color);
+  margin: 0 auto;
+}
+
+.accordion-titlebox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border: 1px solid var(--white-color);
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+.accordion-titlebox i {
+  background: var(--lightblue-color);
+  color: var(--white-color);
+  padding: 5px;
+  border-radius: 50%;
+}
+
+.accordion-title {
+  font-weight: normal;
+  font-size: 1.2em;
+}
+
+.accordion-contentbox {
+  padding: 10px;
+  border-top: 1px solid black;
+  text-transform: capitalize;
+  display: none;
+}
+
+.accordion.showhide-accordion-content .accordion-titlebox {
+  user-select: none;
+}
+
+.accordion.showhide-accordion-content .accordion-contentbox {
+  display: block;
+}
+
+.accordion.accordion.showhide-accordion-content .accordion-titlebox i {
+  transform: rotateX(-180deg);
+}
+
+@media screen and (max-width: 800px) {
+  .headline {
+    font-size: 1.3em;
+  }
+  .accordion {
+    width: 80%;
+  }
+}
