@@ -13,4 +13,6 @@ all_accordions.forEach((single_accordion) => {
       }
     });
   });
+  // ======================================== by doing this it means a single accordions is clicked once by default automatically ========================================
+  accordion_titlebox.click();
 });
